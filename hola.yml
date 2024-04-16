@@ -1,7 +1,6 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-  - tasks:
     - name: make sure hvac is available 
       pip: 
         name: hvac
