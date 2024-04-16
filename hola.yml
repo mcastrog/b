@@ -8,10 +8,13 @@
       debug:
         msg: "Hello World!aaaaa"
         
-    - name: Read a kv1 secret with the default mount point
-      ansible.builtin.set_fact:
-        response: "{{ lookup('community.hashi_vault.vault_kv1_get', 'cubbyhole/mario', url='http://192.168.122.254:8200') }}"
-      # equivalent API path is kv/hello
+    - name: Read a kv1 secret from Vault via the remote host with userpass auth
+      community.hashi_vault.vault_kv1_get:
+        url: http://192.168.122.254:8200
+        path: cubbyhole/mario
+        auth_method: token
+        token: hvs.G2Uo0JSlMIIaBK9lV9p2ULV8
+      register: response
     
     - name: Display the results
       ansible.builtin.debug:
