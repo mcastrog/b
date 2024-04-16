@@ -1,20 +1,6 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Your task
-      ansible_python_interpreter: /usr/bin/python3.9
-    - name: Install pip for more dependencies down the line
-      yum:
-        name:
-          - python3-pip
-          - python-setuptools
-        state: present
-    
-    - name: Install pips for vault module
-      pip:
-        name:
-          - hvac==0.10.8
-        executable: pip3
     - name: Hello Message
       debug:
         msg: "Hello World!"
