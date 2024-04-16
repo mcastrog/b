@@ -10,7 +10,7 @@
         
     - name: Read a kv1 secret with the default mount point
       ansible.builtin.set_fact:
-        response: "{{ lookup('community.hashi_vault.vault_kv1_get', 'cubbyhole/mario', url='http://192.168.122.254:8201') }}"
+        response: "{{ lookup('community.hashi_vault.vault_kv1_get', 'cubbyhole/mario', url='http://192.168.122.254:8200') }}"
       # equivalent API path is kv/hello
     
     - name: Display the results
