@@ -1,6 +1,8 @@
 - name: Hello World Sample
   hosts: all
   tasks:
+    - name: Your task
+      ansible_python_interpreter: /usr/bin/python3.9
     - name: Install pip for more dependencies down the line
       yum:
         name:
