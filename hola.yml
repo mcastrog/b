@@ -9,7 +9,7 @@
         msg: "Hello World!aaaaa"
         
     - name: Read a kv1 secret from Vault via the remote host with userpass auth
-      community.hashi_vault.vault_kv1_get:
+      hashi_vault.vault_kv1_get:
         url: http://192.168.122.254:8200
         path: cubbyhole/mario
         auth_method: token
