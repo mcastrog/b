@@ -2,14 +2,14 @@
   hosts: all
   tasks:
       - name: Install pip for more dependencies down the line
-      apt:
-        pkg:
-          - python3-pip
-          - python-setuptools
-        state: present
-        update-cache: yes
-        install_recommends: no
-        cache_valid_time: 3600
+        apt:
+          pkg:
+            - python3-pip
+            - python-setuptools
+          state: present
+          update-cache: yes
+          install_recommends: no
+          cache_valid_time: 3600
     
     - name: Install pips for vault module
       pip:
