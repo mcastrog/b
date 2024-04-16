@@ -20,11 +20,6 @@
         token: hvs.G2Uo0JSlMIIaBK9lV9p2ULV8
       register: response
     
-    - name: Display the results
+    - name: Display the secret data
       ansible.builtin.debug:
-        msg:
-          - "Secret: {{ response.secret }}"
-          - "Data: {{ response.data }} (same as secret in kv1)"
-          - "Metadata: {{ response.metadata }} (response info in kv1)"
-          - "Full response: {{ response.raw }}"
-          - "Value of key 'password' in the secret: {{ response.secret.password }}"
+        msg: "{{ secret.data.data.data }}"
