@@ -22,4 +22,4 @@
     
     - name: Display the secret data
       ansible.builtin.debug:
-        msg: "{{ response }}"
+        msg: "{{ response.data.data.hola }}"
