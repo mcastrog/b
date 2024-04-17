@@ -1,5 +1,7 @@
 - name: Hello World Sample
   hosts: all
+  vars_files: 
+    - secret.yml
   tasks:
     - name: make sure hvac is available 
       pip: 
@@ -7,7 +9,7 @@
         state: present
     - name: Hello Message
       debug:
-        msg: "Hello World!"
+        msg: "{{ hola }}"
     - name: Hello Message
       debug:
         msg: "Hello World!aaaaa"
