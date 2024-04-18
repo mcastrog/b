@@ -12,7 +12,7 @@
         msg: "{{ hola }}"
     - name: Hello Message
       debug:
-        msg: "Hello World!aaaaa"
+        msg: "Hello World!aaaaa{{ my_ip }}"
         
     - name: Read 
       community.hashi_vault.vault_read:
