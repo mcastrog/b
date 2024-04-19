@@ -1,0 +1,13 @@
+---
+# Playbook to backup Automation controller
+
+- name: Backup Automation controller
+  hosts: localhost
+  vars_files:
+    - secret.yml
+  become: true
+  vars:
+    aap_setup_working_dir: /opt/ansible-automation-platform/installer
+    aap_backup_dest: /opt/ansible-automation-platform/installer/aap_backups/
+  roles:
+    - infra.aap_utilities.aap_backup
