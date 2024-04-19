@@ -1,0 +1,9 @@
+- name: Hello World Sample
+  hosts: all
+  vars_files: 
+    - secret.yml
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "My ip: {{ my_ip }}\n hola : {{ hola  }}"
+        
