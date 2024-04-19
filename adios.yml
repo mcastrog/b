@@ -1,7 +1,5 @@
 - name: Hello World Sample
   hosts: all
-  vars_files: 
-    - secret.yml
   tasks:
     - name: "Check that the path exist"
       ansible.builtin.stat:
@@ -11,7 +9,9 @@
       ansible.builtin.fail:
         msg: "inventory not found"
       when: not credentials_file.stat.exists
-
+    - name: "Cargo el fichero"
+      ansible.builtin.include_vars:
+        file: ./secret.yml
     - name: Hello Message
       debug:
         msg: 
