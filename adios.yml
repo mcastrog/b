@@ -3,6 +3,15 @@
   vars_files: 
     - secret.yml
   tasks:
+    - name: "Check that the path exist"
+      ansible.builtin.stat:
+        path: ./secret.yml
+      register: credentials_file 
+    - name: "Inventory credentials file not found"
+      ansible.builtin.fail:
+        msg: "inventory not found"
+      when: not credentials_file.stat.exists
+
     - name: Hello Message
       debug:
         msg: 
