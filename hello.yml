@@ -51,7 +51,7 @@
 
     - name: Set the license
       controller_license:
-        manifest: "./manifest_AAP_20240429T143755Z.zip"
+        manifest_file: manifest_AAP_20240429T143755Z.zip
     - name: Display API response
       debug:
         var: response
