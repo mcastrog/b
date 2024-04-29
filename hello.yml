@@ -9,6 +9,9 @@
     - name: manifest dos
       debug:
         var: ayu
+    - name: manifest tres
+      debug:
+        msg: "{{ ayu['content'] |  b64decode }}"
     - name: Register node
       uri:
         url: "https://192.168.122.61/api/v2/settings/system/"
