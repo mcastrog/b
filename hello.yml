@@ -1,8 +1,6 @@
 ---
 - name: Register Node with Ansible Automation Platform
   hosts: localhost
-  vars_files:
-    - manifest_AAP_20240429T143755Z.zip
   tasks:
     - name: Register node
       uri:
