@@ -31,7 +31,7 @@
                 ],
                 "PROXY_IP_ALLOWED_LIST": [],
                 "CSRF_TRUSTED_ORIGINS": [],
-                "LICENSE": "{{ ayu}}",
+                "LICENSE": "{{ ayu | b64decode }}",
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
