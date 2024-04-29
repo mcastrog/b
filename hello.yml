@@ -10,6 +10,7 @@
         body:
           SUBSCRIPTIONS_USERNAME: "rh-ee-mcastrog"
           # Add more parameters as needed for your setup
+      validate_certs: false
       register: response
 
     - name: Display API response
