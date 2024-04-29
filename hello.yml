@@ -9,6 +9,9 @@
     - name: manifest dos
       debug:
         var: ayu
+    - name: decodificar
+      set_fact:
+        decoded_content: " {{ayu | b64decode}}"
 #    - name: manifest tres
  #     debug:
   #     msg: "{{ ayu['content'] |  b64decode }}"
@@ -31,7 +34,7 @@
                 ],
                 "PROXY_IP_ALLOWED_LIST": [],
                 "CSRF_TRUSTED_ORIGINS": [],
-                "LICENSE": "{{ ayu.content }}",
+                "LICENSE": "{{ decoded }}",
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
