@@ -9,9 +9,10 @@
     - name: manifest dos
       debug:
         var: ayu
-    - name: manifest tres
-      debug:
-        msg: "{{ ayu['content'] |  b64decode }}"
+
+#    - name: manifest tres
+ #     debug:
+  #     msg: "{{ ayu['content'] |  b64decode }}"
     - name: Register node
       uri:
         url: "https://192.168.122.61/api/v2/settings/system/"
@@ -31,7 +32,7 @@
                 ],
                 "PROXY_IP_ALLOWED_LIST": [],
                 "CSRF_TRUSTED_ORIGINS": [],
-                "LICENSE": {},
+                "LICENSE": { {{ayu}}  },
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
