@@ -9,12 +9,6 @@
     - name: manifest dos
       debug:
         var: ayu
-    - name: decodificar
-      set_fact:
-        decoded_content: "{{ ayu.content | b64decode }}"
-    - name: ad
-      debug:
-        var: decoded_content
 #    - name: manifest tres
  #     debug:
   #     msg: "{{ ayu['content'] |  b64decode }}"
@@ -37,7 +31,6 @@
                 ],
                 "PROXY_IP_ALLOWED_LIST": [],
                 "CSRF_TRUSTED_ORIGINS": [],
-                "LICENSE": "{{ decoded_content }}",
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
@@ -56,6 +49,9 @@
         validate_certs: false
       register: response
 
+    - name: Set the license
+      license:
+        manifest: "./manifest_AAP_20240429T143755Z.zip"
     - name: Display API response
       debug:
         var: response
