@@ -4,7 +4,7 @@
   tasks:
     - name: Register node
       uri:
-        url: "https://192.168.122.61/api/v2/settings/system/"
+        url: "http://192.168.122.61/api/v2/settings/system/"
         method: PUT
         body_format: json
         body:
