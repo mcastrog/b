@@ -1,6 +1,8 @@
 ---
 - name: Register Node with Ansible Automation Platform
   hosts: localhost
+  vars_files:
+    - manifest: manifest_AAP_20240429T143755Z.zip
   tasks:
     - name: Register node
       uri:
@@ -21,6 +23,7 @@
                 ],
                 "PROXY_IP_ALLOWED_LIST": [],
                 "CSRF_TRUSTED_ORIGINS": [],
+                "LICENSE: {{{manifest}}}"
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
