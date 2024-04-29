@@ -2,6 +2,13 @@
 - name: Register Node with Ansible Automation Platform
   hosts: localhost
   tasks:
+    - name: manifest
+      ansible.builtin.slurp:
+        src: manifest_AAP_20240429T143755Z.zip
+      register: ayu
+    - name: manifest dos
+      debug:
+        var: ayu
     - name: Register node
       uri:
         url: "https://192.168.122.61/api/v2/settings/system/"
