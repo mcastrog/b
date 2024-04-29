@@ -21,7 +21,7 @@
                 ],
                 "PROXY_IP_ALLOWED_LIST": [],
                 "CSRF_TRUSTED_ORIGINS": [],
-                "LICENSE: {}",
+                "LICENSE": {},
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
