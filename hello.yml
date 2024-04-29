@@ -24,7 +24,7 @@
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
-                "SUBSCRIPTIONS_PASSWORD": "CG091019"
+                "SUBSCRIPTIONS_PASSWORD": "CG091019",
                 "DEFAULT_EXECUTION_ENVIRONMENT": null,
                 "CUSTOM_VENV_PATHS": [],
                 "INSIGHTS_TRACKING_STATE": false,
