@@ -11,7 +11,10 @@
         var: ayu
     - name: decodificar
       set_fact:
-        decoded_content: "{{ ayu | b64decode }}"
+        decoded_content: "{{ ayu.content | b64decode }}"
+    - name: ad
+      debug:
+        var: decoded_content
 #    - name: manifest tres
  #     debug:
   #     msg: "{{ ayu['content'] |  b64decode }}"
@@ -34,7 +37,7 @@
                 ],
                 "PROXY_IP_ALLOWED_LIST": [],
                 "CSRF_TRUSTED_ORIGINS": [],
-                "LICENSE": "{{ decoded }}",
+                "LICENSE": "{{ decoded_content }}",
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
