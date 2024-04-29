@@ -5,6 +5,8 @@
     - name: Register node
       uri:
         url: "https://192.168.122.61/api/v2/settings/system/"
+        headers:
+          Authorization: "Basic {{ 'admin:password' | b64encode }}"
         method: PUT
         body_format: json
         body: '{ "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog"}'
