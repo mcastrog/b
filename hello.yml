@@ -50,7 +50,7 @@
       register: response
 
     - name: Set the license
-      controller_license:
+      controller_configuration.license:
         manifest_file: manifest_AAP_20240429T143755Z.zip
     - name: Display API response
       debug:
