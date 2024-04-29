@@ -53,6 +53,8 @@
       awx.awx.license:
         controller_host: "192.168.122.61"
         validate_certs: false
+        controller_username: "admin"
+        controller_password: "password"
         manifest: "./manifest_AAP_20240429T143755Z.zip"
     - name: Display API response
       debug:
