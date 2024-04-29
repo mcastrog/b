@@ -9,8 +9,24 @@
           Authorization: "Basic {{ 'admin:password' | b64encode }}"
         method: PUT
         body_format: json
-        body: '{ "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog"}'
-          # Add more parameters as needed for your setup
+        body: '{
+                "PROXY_IP_ALLOWED_LIST": [],
+                "CSRF_TRUSTED_ORIGINS": [],
+                "REDHAT_USERNAME": "",
+                "REDHAT_PASSWORD": "",
+                "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
+                "SUBSCRIPTIONS_PASSWORD": "",
+                "DEFAULT_EXECUTION_ENVIRONMENT": null,
+                "CUSTOM_VENV_PATHS": [],
+                "INSIGHTS_TRACKING_STATE": false,
+                "AUTOMATION_ANALYTICS_LAST_GATHER": null,
+                "AUTOMATION_ANALYTICS_LAST_ENTRIES": "",
+                "AUTOMATION_ANALYTICS_GATHER_INTERVAL": 14400,
+                "UI_NEXT": true,
+                "CLEANUP_HOST_METRICS_LAST_TS": null,
+                "HOST_METRIC_SUMMARY_TASK_LAST_TS": null
+            }'
+              # Add more parameters as needed for your setup
         validate_certs: false
       register: response
 
