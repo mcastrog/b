@@ -1,7 +1,17 @@
-- name: Hello World Sample
-  hosts: all
+---
+- name: Register Node with Ansible Automation Platform
+  hosts: localhost
   tasks:
-    - name: Hello Message
+    - name: Register node
+      uri:
+        url: "https://192.168.122.61/api/v2/settings/system/"
+        method: PUT
+        body_format: json
+        body:
+          SUBSCRIPTIONS_USERNAME: "rh-ee-mcastrog"
+          # Add more parameters as needed for your setup
+      register: response
+
+    - name: Display API response
       debug:
-        msg: "fdsfsdgiuWld!"
-        
+        var: response
