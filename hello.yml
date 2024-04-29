@@ -23,7 +23,7 @@
                 ],
                 "PROXY_IP_ALLOWED_LIST": [],
                 "CSRF_TRUSTED_ORIGINS": [],
-                "LICENSE: {manifest_AAP_20240429T143755Z.zip}"
+                "LICENSE: {}",
                 "REDHAT_USERNAME": "",
                 "REDHAT_PASSWORD": "",
                 "SUBSCRIPTIONS_USERNAME": "rh-ee-mcastrog",
