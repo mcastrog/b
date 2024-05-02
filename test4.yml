@@ -14,8 +14,8 @@
         name: "Demo Job Template"
         survey_enabled: yes 
         survey_spec: 
-          - question_name: "Estas ahi"
-          - type: "text"
-          - variable: "texto"
-          - required: false
+          question_name: "Estas ahi"
+          type: "text"
+          variable: "texto"
+          required: false
           
