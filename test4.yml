@@ -1,0 +1,21 @@
+---
+- name: test1
+  hosts: localhost
+  tasks:
+    - name: print
+      debug:
+        msg: "Hola Mundo"
+    - name: anadir survey
+      ansible.controller.job_template:
+        controller_host: 192.168.122.61
+        validate_certs: false
+        controller_username: "admin"
+        controller_password: "password"
+        name: "Demo Job Template"
+        survey_enabled: yes 
+        survey_spec: 
+          - question_name: "Estas ahi"
+          - type: "text"
+          - variable: "texto"
+          - required: false
+          
