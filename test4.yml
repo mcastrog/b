@@ -14,6 +14,7 @@
         name: "Demo Job Template"
         survey_enabled: yes 
         survey_spec: 
+          name: "mi sruvey"
           description: "mi survey"
           spec:
             - question_name: "Estas ahi"
