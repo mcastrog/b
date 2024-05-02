@@ -11,7 +11,7 @@
         validate_certs: false
         controller_username: "admin"
         controller_password: "password"
-        name: grupos
+        name: grus
         inventory: Demo Inventory
         hosts:
           - localhost
