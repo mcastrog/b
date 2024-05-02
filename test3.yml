@@ -12,5 +12,6 @@
         controller_username: "admin"
         controller_password: "password"
         role: inventory_admin
+        inventories: Demo Inventory
         user: jambo
         
