@@ -6,7 +6,7 @@
       debug:
         msg: "Hola Mundo"
     - name: anadir grupo
-      ansible.controller.group:
+      ansible.controller.credential:
         controller_host: 192.168.122.61
         validate_certs: false
         controller_username: "admin"
