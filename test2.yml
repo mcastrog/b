@@ -13,4 +13,5 @@
         controller_password: "password"
         credential_type: Machine
         name: Credencial
+        organization: Default
         
