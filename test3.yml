@@ -11,7 +11,7 @@
         validate_certs: false
         controller_username: "admin"
         controller_password: "password"
-        role: inventory_admin
+        role: admin
         inventories: Demo Inventory
         user: jambo
         
