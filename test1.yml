@@ -5,3 +5,9 @@
     - name: print
       debug:
         msg: "Hola Mundo"
+    - name: anadir grupo
+      anisble.controller.group:
+        name: grupos
+        inventory: Demo Inventory
+        hosts:
+          - localhost
