@@ -15,8 +15,8 @@
         survey_enabled: yes 
         survey_spec: 
           spec:
-            question_name: "Estas ahi"
-            type: "text"
-            variable: "texto"
-            required: false
+            - question_name: "Estas ahi"
+              type: "text"
+              variable: "texto"
+              required: false
           
