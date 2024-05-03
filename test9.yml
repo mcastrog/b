@@ -1,0 +1,6 @@
+- name: Remove license
+  hosts: localhost
+  tasks:
+    - name: remove license
+      ansible.controller.license:
+        state: absent
