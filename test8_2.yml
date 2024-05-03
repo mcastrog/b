@@ -1,0 +1,25 @@
+---
+- name: Instance group
+  hosts: localhost
+  tasks:
+    - name: Instance group
+      uri:
+        url: "https://192.168.122.61/api/v2/instance_groups/4/instances/"
+        headers:
+          Authorization: "Basic {{ 'admin:password' | b64encode }}"
+        method: PUT
+        body_format: json
+        body: '{
+                "count": 1,
+                "next": null,
+                "previous": null,
+                "results": [
+        ]
+            }'
+              # Add more parameters as needed for your setup
+        validate_certs: false
+      register: response
+
+    - name: Display API response
+      debug:
+        var: response
