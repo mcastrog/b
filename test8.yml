@@ -13,4 +13,4 @@
         controller_password: "password"
         name: "Test8"
         instances: "192.168.122.61"
-        state: absent
+        state: present
