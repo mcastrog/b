@@ -1,0 +1,20 @@
+---
+- name: test1
+  hosts: localhost
+  tasks:
+    - name: print
+      debug:
+        msg: "Hola Mundo"
+    - name: anadir survey
+      ansible.controller.job_launch:
+        controller_host: 192.168.122.61
+        validate_certs: false
+        controller_username: "admin"
+        controller_password: "password"
+        job_template: "My Job Template"
+        extra_vars:
+          var1: "My First Variable"
+          var2: "My Second Variable"
+          var3: "My Third Variable"
+        job_type: run
+          
