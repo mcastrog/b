@@ -4,5 +4,9 @@
     - name: debug
       debug:
         var: var1
+    - name: debug2
+      debug:
         var: var2
+    - name: debug3
+      debug:
         var: var3
