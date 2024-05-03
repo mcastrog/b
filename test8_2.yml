@@ -10,10 +10,7 @@
         method: POST
         body_format: json
         body: '{
-                "count": 0,
-                "next": null,
-                "previous": null,
-                "results": []
+                "id": null
             }'
               # Add more parameters as needed for your setup
         validate_certs: false
