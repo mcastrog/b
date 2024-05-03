@@ -5,11 +5,12 @@
     - name: print
       debug:
         msg: "Hola Mundo"
-    - name: Proyect update 
+    - name: instance group 
       ansible.controller.instance_group:
         controller_host: 192.168.122.61
         validate_certs: false
         controller_username: "admin"
         controller_password: "password"
         name: "Test8"
-        policy_instance_list: 
+        instances: "192.168.122.61"
+        state: absent
