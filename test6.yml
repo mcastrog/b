@@ -1,0 +1,18 @@
+---
+- name: test1
+  hosts: localhost
+  tasks:
+    - name: print
+      debug:
+        msg: "Hola Mundo"
+    - name: Launch a workflow 
+      ansible.controller.workflow_launch:
+        controller_host: 192.168.122.61
+        validate_certs: false
+        controller_username: "admin"
+        controller_password: "password"
+        workflow_template: "Test6"
+        extra_vars:
+          var1: "My First Variable"
+          var2: "My Second Variable"
+          var3: "My Third Variable"
