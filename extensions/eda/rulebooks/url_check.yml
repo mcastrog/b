@@ -1,10 +1,11 @@
 ---
 - name: Listen for events on a webhook
-  hosts: localhost
+  hosts: all
   sources:
-    - ansible.eda.url_check:
-      urls:
-        - http://192.168.122.215
+    - name: Ansible urls
+      ansible.eda.url_check:
+        urls:
+          - http://192.168.122.215
       delay: 10
 
   rules:
