@@ -1,0 +1,7 @@
+---
+- name: Adios World
+  hosts: localhost
+  tasks:
+    - name: Adios
+      debug:
+        msg: "Adios hasta pronto"
