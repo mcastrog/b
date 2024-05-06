@@ -11,10 +11,11 @@
     - name: Is up
       condition: event.url_check.status == "up"
       action:
-        run_playbook:
-          name: "hello_world.yml"
+        run_job_template:
+          name: eda_hello
+
     - name: Is down
       condition: event.url_check.status == "down"
       action:
-        run_playbook:
-          name: "adios_world.yml" 
+        run_job_template:
+          name: eda_adios
