@@ -5,7 +5,7 @@
     - name: Ansible urls
       ansible.eda.url_check:
         urls:
-          - http://192.168.122.215
+          - https://github.com/
       delay: 10
 
   rules:
