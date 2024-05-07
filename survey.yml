@@ -3,4 +3,5 @@
   hosts: all
   tasks:
     - name: print survey variables
+      debug:
         msg: "{{ variable1 }} y {{ variable2 }} y ademas {{ variable3  }}"
