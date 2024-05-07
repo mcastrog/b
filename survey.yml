@@ -1,0 +1,6 @@
+---
+- name: Survey variables
+  hosts: all
+  tasks:
+    - name: print survey variables
+        msg: "{{ variable1 }} y {{ variable2 }} y ademas {{ variable3  }}"
